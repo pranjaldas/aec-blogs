@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="create-blog-container text-center col-lg-10 col-md-10">
+            <div class="card-body d-flex flex-column justify-content-center align-items-center">
+              <h2>Hii All!!!</h2>
+              <p class="card-text">You can write your own blog and share your thoughts here, click create button!</p>
+              <a class="btn btn-success" href="blog/create"><i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;Create</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row justify-content-center">
+        <div *ngFor="let blog of blogsList" class="blog col-lg-10 col-md-10">
+          <app-blog [blog]="blog" (blogDeleted)="onBlogDeleted($event)"></app-blog>
+        </div>
+    </div>
+</div>

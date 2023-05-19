@@ -1,0 +1,11 @@
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">{{blog?.title}}</h3>
+    <p class="card-text">{{blog?.content}}</p>
+    <p class="card-text"> - {{blog?.author}}, {{blog?.date | date}}</p>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-primary me-2" (click)="editBlog()"><i class="fa fa-pencil-square" aria-hidden="true"></i>&nbsp;Edit</button>
+      <button class="btn btn-danger" (click)="deleteBlog()"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;Delete</button>
+    </div>
+  </div>
+</div>
